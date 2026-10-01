@@ -15,10 +15,14 @@ Fine-tuning `bert-base-uncased` on the IMDB movie review dataset to classify rev
 4. **Evaluation:** accuracy, classification report, confusion matrix
 
 ## Results
-| Metric | Value |
-|---|---|
-| Test accuracy | <your accuracy> |
-| Precision / Recall / F1 | <from classification report> |
+| Metric | Negative | Positive | Overall |
+|---|---|---|---|
+| Precision | 0.91 | 0.88 | 0.89 (macro avg) |
+| Recall | 0.88 | 0.91 | 0.89 (macro avg) |
+| F1-score | 0.89 | 0.89 | 0.89 (macro avg) |
+| Test accuracy | | | **0.89** (1,000 test reviews) |
+
+The model is well balanced, with similar precision and recall on both classes, so it isn't biased toward one sentiment. Results are from a 1,000-review test subset, so expect some noise (roughly ±2%).
 
 Confusion matrix and sample predictions are in the notebook.
 
